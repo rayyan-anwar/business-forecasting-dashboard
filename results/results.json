@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-18T07:13:02+00:00",
+  "seeds": 20,
+  "environment": {
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "numpy": "2.4.4",
+    "cpu_count": 1
+  },
+  "holdout": {
+    "forecasts": 60,
+    "mae_ratio_vs_seasonal_naive_mean": 0.939100850727845,
+    "mae_ratio_vs_seasonal_naive_median": 0.9321054195166438,
+    "share_beating_seasonal_naive": 0.6333333333333333,
+    "interval80_empirical_coverage": 0.8464285714285714,
+    "selection_regret_pct_mean": 10.913290906790222,
+    "share_within_5pct_of_hindsight_best": 0.5333333333333333,
+    "models_chosen": {
+      "seasonal_naive": 5,
+      "holt_winters": 41,
+      "ses": 9,
+      "ridge_lags": 3,
+      "drift": 1,
+      "holt": 1
+    },
+    "mean_backtest_improvement_claimed_pct": 20.852368307408092
+  },
+  "data_quality": {
+    "injected": {
+      "invalid_date": 50,
+      "invalid_value": 40
+    },
+    "reported": {
+      "invalid_date": 50,
+      "invalid_value": 40
+    },
+    "counts_exact": true,
+    "missing_periods_reported": 32,
+    "missing_periods_independent_count": 32,
+    "fill_count_exact": true
+  },
+  "runtime": {
+    "series": 20,
+    "periods_each": 730,
+    "seconds_total": 10.215687621999997
+  }
+}

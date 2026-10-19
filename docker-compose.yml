@@ -1,0 +1,14 @@
+services:
+  business-forecasting-dashboard:
+    build: .
+    ports:
+      - "8020:8020"
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8020/health', timeout=4)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
